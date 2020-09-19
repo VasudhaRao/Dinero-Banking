@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+form(action='f2' ,method='POST')
+  .container
+    h1 Enter your password
+    p Please fill in this form to complete your registration process.
+    label(for='psw')
+      b Password
+    input(type='password' placeholder='Enter Password' name='psw' required='')
+    br
+    br
+    label(for='psw-repeat')
+      b Repeat Password
+    input(type='password' placeholder='Repeat Password' name='psw-repeat' required='')
+    hr
+    button.registerbtn(type='submit') Register

@@ -1,0 +1,104 @@
+doctype html
+title t1
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Amatic+SC')
+style.
+  .parallax {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 ");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .parallax1 {
+  /* The image used */
+  background-image: url("https://cdn.pixabay.com/photo/2018/06/22/03/42/agreement-3489902__340.jpg");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .parallax2 {
+  /* The image used */
+  background-image: url("https://cdn.stocksnap.io/img-thumbs/960w/E3AQRINWUI.jpg");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .parallax3 {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/128867/coins-currency-investment-insurance-128867.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  body, html {height: 100%}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+  .menu {display: none}
+// Navbar (sit on top)
+.w3-top.w3-hide-small
+  #myNavbar.w3-bar.w3-xlarge.w3-black.w3-opacity.w3-hover-opacity-off
+    a.w3-bar-item.w3-button(href='#') WITH IN BANK
+    a.w3-bar-item.w3-button(href='#diffacc') DIFFERENT ACCOUNT
+    a.w3-bar-item.w3-button(href='#paybills') PAYBILLS
+    a.w3-bar-item.w3-button(href='#history') HISTORY
+// Header with image
+header#home.parallax.w3-display-container
+  .w3-display-middle.w3-center
+    span.w3-text-black.w3-hide-small(style='font-size:150px')
+      | with
+      br
+      | DINERO BANK
+    p
+      a.w3-button.w3-xxlarge.w3-black.w3-center(href='./t2') Let&apos;s Go
+header#diffacc.parallax1.w3-display-container
+  .w3-display-middle.w3-center
+    span.w3-text-black.w3-hide-small(style='font-size:150px')
+      | with
+      br
+      | DIFFERENT BANK
+    p
+      a.w3-button.w3-xxlarge.w3-black.w3-center(href='./t3') Let&apos;s Go
+header#paybills.parallax2.w3-display-container
+  .w3-display-middle.w3-center
+    span.w3-text-white.w3-hide-small(style='font-size:150px') PAY BILLS
+    p
+      a.w3-button.w3-xxlarge.w3-black.w3-center(href='./t4') Let&apos;s Go
+header#history.parallax3.w3-display-container
+  .w3-display-middle.w3-center
+    span.w3-text-black.w3-hide-small(style='font-size:150px') . HISTORY
+    p
+      a.w3-button.w3-xxlarge.w3-black.w3-center(href='./transaction_history') Let&apos;s Go
+script.
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+  }
+  document.getElementById("myLink").click();

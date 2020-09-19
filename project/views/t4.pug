@@ -1,0 +1,180 @@
+doctype html
+head
+  title userdash
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+  style.
+    body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    }
+    .navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    }
+    .navbar li a,
+    .navbar .navbar-brand {
+    color: white !important;
+    }
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+    color: black !important;
+    background-color: white !important;
+    }
+    .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+    }
+    body{
+    margin: 0;
+    padding: 0;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx3wOeePAytt8XcXntcSpqaLBDULud7mzM_DallHpJ3AvdGywZ);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    }
+    body,
+    html {
+    height: 100%
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    font-family: "Amatic SC", sans-serif
+    }
+    .menu {
+    display: none
+    }
+.w3-bar.w3-black
+  a.w3-bar.w3-black(onclick="openreq('gas')")
+    img(src='data:image/png;base64,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' alt='logo' style='width:3%;')
+  button.w3-bar-item.w3-button.w3-animate-right(onclick="openreq('gas')") GAS
+  button.w3-bar-item.w3-button.w3-animate-right(onclick="openreq('electricity')") ELECTRICITY
+  button.w3-bar-item.w3-button.w3-animate-right(onclick="openreq('mobile')") MOBILE
+#gas.w3-container.req
+  .container
+    br
+    br
+    br
+    h3 #{message}
+    form.form-horizontal(action='/t6/gas' method='post')
+      .form-group
+       
+        label.control-label.col-sm-4(for='billno') Bill No : 
+        .col-sm-5
+          input#billno.form-control(type='text' placeholder='Bill no' name='billnum' pattern='[0-9]{6}$' required='')
+      br
+      .form-group
+        label.control-label.col-sm-4(for='amt') Company : 
+        .col-sm-5
+          select(name='cname')
+            option select
+            option INDANE
+            option HP
+      br
+      .form-group
+        label.control-label.col-sm-4(for='mpin') MPIN : 
+        .col-sm-5
+          input#mpin.form-control(type='password' placeholder='mpin' name='mpin' pattern='[0-9]{4}$' required='')
+      br
+      .form-group
+        
+        .col-sm-offset-5.col-sm-5
+          button.btn.btn-default(type='submit') PAY
+#electricity.w3-container.req(style='display:none;')
+  .container
+    br
+    br
+    br
+    h3 #{message}
+    form.form-horizontal(action='/t6/electricity' method='post')
+      .form-group
+        label.control-label.col-sm-4(for='billno') Bill No : 
+        .col-sm-5
+          input#billno.form-control(type='text' placeholder='Bill no' name='billnum' pattern='[0-9]{9}$' required='')
+      br
+      .form-group
+        label.control-label.col-sm-4(for='amt') State : 
+        .col-sm-5
+          select(name='cname')
+            option select
+            option ANDHRA PRADESH
+            option TAMIL NADU
+      br
+      .form-group
+        label.control-label.col-sm-4(for='mpin') MPIN : 
+        .col-sm-5
+          input#mpin.form-control(type='password' placeholder='mpin' name='mpin' pattern='[0-9]{4}$' required='')
+      br
+      .form-group
+        
+        .col-sm-offset-5.col-sm-5
+          button.btn.btn-default(type='submit') PAY
+#mobile.w3-container.req(style='display:none;')
+  .container
+    br
+    br
+    br
+    h3 #{message}
+    form.form-horizontal(action='/t6/mobile' method='post')
+      .form-group
+        label.control-label.col-sm-4(for='mobno') Mobile No : 
+        .col-sm-5
+          input#mobno.form-control(type='text' placeholder='Mobile no' name='mobile' pattern='[0-9]{10}$' required='')
+      br
+      .form-group
+        label.control-label.col-sm-4(for='amt') Company : 
+        .col-sm-5
+          select(name='cname')
+            option select
+            option JIO
+            option BSNL
+            option AIRTEL
+      br
+      .form-group
+        label.control-label.col-sm-4(for='amt') MPIN :
+        .col-sm-5
+          input#amt.form-control(type='password' placeholder='mpin' name='mpin' pattern='[0-9]{4}$' required='')
+      br
+      .form-group
+        
+        .col-sm-offset-5.col-sm-5
+          button.btn.btn-default(type='submit') PAY
+script.
+  function openreq(cityName) {
+  var i;
+  var x = document.getElementsByClassName("req");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "block";
+  }
+  function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+  }
+  function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+  }
+  function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "block";
+  }

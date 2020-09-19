@@ -1,0 +1,84 @@
+head
+  title Login
+  link(rel='stylesheet' type='text/css' href='style.css')
+  style.
+    body {
+    margin: 0;
+    padding: 0;
+    background: url(https://images.unsplash.com/photo-1534448177492-6d698f12a59a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    }
+    .registerbox {
+    width: 400px;
+    height: 380px;
+    background: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 70px;
+    }
+    h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    }
+    .registerbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    }
+    .registerbox input {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #000;
+    }
+    .registerbox input[type="text"],
+    input[type="password"] {
+    border: none;
+    border-bottom: lpx solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    }
+    .registerbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    }
+    .registerbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    }
+    .registerbox a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    }
+    .registerbox a:hover {
+    color: #ffc107;
+    }
+.registerbox
+  h1  LOGIN
+  br
+  form(action='/try' method='POST')
+    p Customer ID
+    input#custid(type='text' name='custid' placeholder='Enter Customer ID' pattern='[0-9]{8}$' required='')
+    br
+    p Password
+    input#pwd(type='password' name='pwd' placeholder='Password' required='')
+    br
+    p
+      font(color='red') xyz
+    br
+    input(type='submit' name='lgn1' value='Submit')

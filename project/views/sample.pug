@@ -1,0 +1,14 @@
+br
+br
+br
+div
+  table.table.table-striped
+    thead
+      tr
+        th(scope='col') #
+        th(scope='col') id
+    tbody
+      tr(*ngfor='let record of Customers; let myIndex = index;')
+        th(scope='row') {{myIndex + 1}}
+        td
+          a([routerlink]="['/list',record.p_accident_id]") {{result[0].password}}

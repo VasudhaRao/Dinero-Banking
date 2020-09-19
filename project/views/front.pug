@@ -1,0 +1,28 @@
+html
+  head
+  body
+    form(action='http://localhost:3000/insert')
+
+      companyId Company ID          				 Company Name        			   	Contact Name    	 			    Country     	   		   	 Actions
+      br
+      input(type='text', name='id2')
+      input(type='text', name='compname')
+      input(type='text', name='contactname')
+      input(type='text', name='country')
+      input(type='submit', value='Insert'  formaction="http://localhost:3000/insert")
+      br
+      br
+        
+      each element in values
+        input(type='text',value=element._id name='id1')
+        input(type='text',value=element.companyname name='compname1')
+        input(type='text',value=element.contact name='contact1')
+        input(type='text',value=element.count name='country1')
+        input(type='submit', value='Update', name=element._id, formaction="http://localhost:3000/update/"+element._id)
+        input(type='submit', value='Delete' ,id=element._id ,name=element._id ,formaction="http://localhost:3000/delete/"+element._id)
+        br
+      else
+       li Empty database
+
+
+       

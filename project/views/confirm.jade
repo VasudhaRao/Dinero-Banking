@@ -1,0 +1,13 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+form(action='/action_page.php')
+  .container
+    h1 Check the password from mail
+    p Enter the random passsword.
+    label(for='psw')
+      b Password
+    input#psw(type='password', placeholder='Enter Password', name='psw', required='')
+    br
+    br
+    button.submitrndm(type='submit') Submit

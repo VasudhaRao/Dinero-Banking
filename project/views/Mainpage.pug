@@ -1,0 +1,533 @@
+doctype html
+head
+  title DINERO BANK
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  // link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet')
+  style.
+    body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    }
+    h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+    }
+    h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+    }
+    .jumbotron {
+    background-color: #000000;
+    color: #fff;
+    padding: 327px 25px;
+    font-family: Montserrat, sans-serif;
+    }
+    .container-fluid {
+    padding: 60px 50px;
+    }
+    .bg-grey {
+    background-color: #f6f6f6;
+    }
+    .logo {
+    color: #000000;
+    font-size: 200px;
+    }
+    .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    }
+    .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    }
+    .carousel-control.right,
+    .carousel-control.left {
+    background-image: none;
+    color: #000000;
+    }
+    .carousel-indicators li {
+    border-color: #000000;
+    }
+    .carousel-indicators li.active {
+    background-color: #000000;
+    }
+    .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+    }
+    .item span {
+    font-style: normal;
+    }
+    .panel {
+    border: 1px solid #000000;
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+    }
+    .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+    .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+    }
+    .panel-heading {
+    color: #fff !important;
+    background-color: #000000 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    }
+    .panel-footer {
+    background-color: white !important;
+    }
+    .panel-footer h3 {
+    font-size: 32px;
+    }
+    .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+    }
+    .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #000000;
+    color: #fff;
+    }
+    .navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    }
+    .navbar li a,
+    .navbar .navbar-brand {
+    color: white !important;
+    }
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+    color: black !important;
+    background-color: white !important;
+    }
+    .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+    }
+    footer .glyphicon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: black;
+    }
+    .slideanim {
+    visibility: hidden;
+    }
+    .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+    }
+    @keyframes slide {
+    0% {
+    opacity: 0;
+    transform: translateY(70%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0%);
+    }
+    }
+    @-webkit-keyframes slide {
+    0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    }
+    }
+    @media screen and (max-width: 768px) {
+    .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+    }
+    .btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
+    }
+    }
+    @media screen and (max-width: 480px) {
+    .logo {
+    font-size: 150px;
+    }
+    }
+    .fa {
+    padding: 30px;
+    font-size: 40px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+    border-radius: 60%;
+    }
+    .fa:hover {
+    opacity: 0.8;
+    }
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+    .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    }
+    .fa-google {
+    background: #dd4b39;
+    color: white;
+    }
+    .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    }
+    .fa-instagram {
+    background: #cd486b;
+    color: white;
+    }
+    .fa-youtube {
+    background: red;
+    color: white;
+    }
+    .carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    }
+    .lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+    stroke-width: 1;
+    }
+    .services-icon {
+    margin-bottom: 20px;
+    font-size: 30px;
+    }
+    bgc2,
+    .vLine,
+    .hLine {
+    background-color: #0F52BA;
+    }
+    .quote-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    }
+    .services-icon {
+    font-size: 60px;
+    margin-left: 2rem;
+    }
+    .registerbox input[type="submit"]
+    {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    }
+    .registerbox input[type="submit"]:hover
+    {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    }
+form(method='post')  
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button' data-toggle='collapse' data-target='#about')
+      a.navbar-brand(href='#about')
+        img(src='data:image/png;base64,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' alt='logo' style='width:15%;')
+    #myNavbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#about') ABOUT
+        li
+          a(href='#services') SERVICES
+        li
+          a(href='#contact') CONTACT
+        li
+          a(href='#login') LOGIN
+.jumbotron.text-center
+  h1 DINERO BANKING
+  br
+  br
+  br
+  p You&rsquo;re Not Just Another CUSTOMER... We&rsquo;re Not Just Another BANK...!
+// Container (About Section)
+#about.container-fluid
+  .row
+    .col-sm-8
+      h2 About our Bank
+      br
+      h4
+        | DINERO BANK is the India&apos;s finest online bank designed exclusive for Online Banking. In modern time there has been huge reductions to the barriers of global competition in the banking industry. Increases in telecommunications and other
+        | financial technologies, such as Bloomberg, have allowed us to reach all over the world, since we no longer have to be near customers to manage both their finances and their risk.
+      br
+      p
+        | The growth in cross-border activities has also increased the demand for banks that can provide various services across borders to different nationalities. However, despite these reductions in barriers and growth in cross-border activities,
+        | the banking industry is nowhere near as globalized as some other industries
+    .col-sm-4
+      span.logo
+        img(src='http://landuselearning.com/wp-content/uploads/2015/03/iconmonstr-bar-chart-4-icon.png' alt='image' style='width:100%;')
+.container-fluid.bg-grey
+  .row
+    .col-sm-4
+      span.glyphicon.glyphicon-globe.logo.slideanim
+    .col-sm-8
+      h2 Importance of Online Banking
+      br
+      h4
+        strong Security
+        |  of a customer&apos;s financial information is very important, without which online banking could not operate. Similarly the reputational risks to banks themselves are important. Dinero banking have set up various
+        |                 security processes to reduce the risk of unauthorized online access to a customer&apos;s records, but there is no consistency to the various approaches adopted.
+      br
+      p
+        strong Dinero Bank
+        |  can determine the types of financial transactions which a customer may transact through online banking, but usually includes obtaining account balances, a list of recent transactions, electronic bill payments,
+        |                 funds transfers between a customer&apos;s or another&apos;s accounts. we set limits on the amounts that may be transacted, and other restrictions.
+// Container (Services Section)
+#services.container-fluid.text-center
+  h2 SERVICES
+  h4 What we offer
+  br
+  .row.slideanim
+    .col-sm-4
+      span
+        img(src='https://cdn.onlinewebfonts.com/svg/img_454420.png' alt='image' style='width:45%;')
+      br
+      br
+      h4 FUNDS TRANSFER
+      p Online Transaction
+    .col-sm-4
+      span
+        img(src='data:image/png;base64,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' alt='image' style='width:45%;')
+        br
+        br
+      h4 BILL PAYMENTS
+      p Online Payment
+    .col-sm-4
+      span
+        img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1yCV6hTSPLy4kuO894aULwZYylLMv-vsCNK6UndurjxsuDd-o' alt='image' style='width:40%;')
+      br
+      br
+      h4 SECURITY
+      p Most Secured Account
+// Container (Portfolio Section)
+.container-fluid.text-center.bg-grey
+  h2 What our Banking say
+  #myCarousel.carousel.slide.text-center(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#myCarousel' data-slide-to='0')
+      li(data-target='#myCarousel' data-slide-to='1')
+      li(data-target='#myCarousel' data-slide-to='2')
+    // Wrapper for slides
+    .carousel-inner(role='listbox')
+      .item.active
+        h4
+          | &quot;Banking is very good business if you don&apos;t do anything dumb!&quot;
+          br
+          span -Warren Buffett
+      .item
+        h4
+          | &quot;Progress is cumulative in science and engineering, but cyclical in finance. !!&quot;
+          br
+          span &mdash;james Grant
+      .item
+        h4
+          | &quot;Banking is necessary. Banks are not..!!&quot;
+          br
+          span &mdash;Wells Fargo&apos;s&nbsp;
+    // Left and right controls
+    a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next
+// Container (Contact Section)
+form(action='https://script.google.com/macros/s/AKfycbyvunbwnNzLk6ORbeyWYJfFHx-ZGgK1l0A3AT0nCA/exec' method='post')
+  #contact.container-fluid
+    h2.text-center CONTACT
+    .row
+      .col-sm-5
+        p Contact us and we&apos;ll get back to you within 24 hours.
+        p
+          span.glyphicon.glyphicon-map-marker
+          |  COIMBATORE, INDIA
+        p
+          span.glyphicon.glyphicon-phone
+          |  +91 9440914599
+        p
+          span.glyphicon.glyphicon-envelope
+          |  customerservice_dinero@gmail.com
+      .col-sm-7.slideanim
+        .row
+          .col-sm-6.form-group
+            input#name.form-control(name='name' placeholder='Name' type='text' required='')
+          .col-sm-6.form-group
+            input#email.form-control(name='email' placeholder='Email' type='email' required='')
+        textarea#comments.form-control(name='comments' placeholder='Comment' rows='5')
+        br
+        .row
+          .col-sm-12.form-group
+            button.btn.btn-default.pull-right(type='submit') Send
+.container-fluid
+  .row
+    span.logo.slideanim
+      img(src='https://www.amrita.edu/sites/default/files/amrita-new-logo-bw-4.jpg' alt='image' style='width:100%')
+    .col-sm-8
+      h2 Amrita Vishwavidhyapeetam
+      br
+      h4
+        strong &apos;A&apos; Grade by NAAC
+        |  - Amrita University is accredited with the highest grade of &apos;A&apos; by the National Assessment and Accreditation Council.
+      br
+      p
+        strong Amrita University
+        |  is an university that brings out the talents and creativity in every individual and enhances the analytical thinking and prepares students for a more better involvement in their work .
+// Container (Portfolio Section)
+.container-fluid.text-center.bg-grey
+  h2 Contributors
+  // Wrapper for slides
+  .carousel-inner(role='listbox')
+    .item.active
+      h4
+        | A VASUDHA RAO
+        br
+        span &mdash;cb.en.u4cse16202
+    .item.active
+      h4
+        | AISHWARYA RAMRAJ
+        br
+        span -cb.en.u4cse16203
+    .item.active
+      h4
+        | G.D.H.S.S.CHAKRADHAR
+        br
+        span &mdash;cb.en.u4cse16208
+    .item.active
+      h4
+        | G.L.V.CHARAN
+        br
+        span &mdash;cb.en.u4cse16211
+    .item.active
+      h4
+        | SRIJHA KALYAN
+        br
+        span &mdash;cb.en.u4cse16251
+#login.container-fluid.registerbox
+  .row
+    form(action='/adminside' method='POST')
+      .col-sm-6
+        h2
+          strong ADMIN LOGIN
+          br
+        input(type='submit' name='admin' value='Login')
+        br
+    form(action='/userside' method='POST')
+      .col-sm-6
+        h2
+          strong USER LOGIN AND REGISTRATION
+          br
+        input(type='submit' name='admin' value='Login')
+        br
+    
+
+#about.container-fluid.bg-grey
+  .row
+    .col-sm-3
+    .col-sm-1
+      a.fa.fa-facebook(href='https://www.facebook.com/AmritaUniversity/')
+    .col-sm-1
+      a.fa.fa-twitter(href='https://twitter.com/amritaedu?lang=en')
+    .col-sm-1
+      a.fa.fa-google(href='https://mail.google.com')
+    .col-sm-1
+      a.fa.fa-linkedin(href='https://www.linkedin.com/company/amrita-vishwa-vidyapeetham/about/')
+    .col-sm-1
+      a.fa.fa-instagram(href='https://www.instagram.com/amritaengineering/?hl=en')
+    .col-sm-2
+      a.fa.fa-youtube(href='https://www.youtube.com/user/AmritaUniversity')
+footer.container-fluid.text-center.bg-grey
+  a(href='#about' title='To Top')
+    span.glyphicon.glyphicon-chevron-up
+  p GO TO TOP
+script.
+  $(document).ready(function() {
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#about']").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+  // Prevent default anchor click behavior
+  event.preventDefault();
+  // Store hash
+  var hash = this.hash;
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+  scrollTop: $(hash).offset().top
+  }, 900, function() {
+  // Add hash (#) to URL when done scrolling (default click behavior)
+  window.location.hash = hash;
+  });
+  } // End if
+  });
+  $(window).scroll(function() {
+  $(".slideanim").each(function() {
+  var pos = $(this).offset().top;
+  var winTop = $(window).scrollTop();
+  if (pos < winTop + 600) {
+  $(this).addClass("slide");
+  }
+  });
+  });
+  })

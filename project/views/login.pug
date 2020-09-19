@@ -1,0 +1,20 @@
+doctype html
+head
+form(action='/try' ,method='POST')
+  .container
+    h1 Login
+    p Please fill in this form to login
+    hr
+    label(for='customerid')
+      b Customer ID
+    input(type='text' placeholder='Customer Id' name='userid' pattern='[0-9]{8}$'  required='')
+    br
+    br
+    label(for='pwd')
+      b Password
+    input(type='password' placeholder='Password' name='pwd'   required='')
+    h4 #{message}
+    br
+    br
+    hr
+    button.login(type='submit' name='logging'  value='logging') Login

@@ -1,0 +1,24 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+head
+  meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+  title JSP Page
+h1 Hello World!
+form(action='f4' method='POST')
+  | within bank:
+  input(type='radio' name='typebank' value='within')
+  br
+  |             diff bank:
+  input(type='radio' name='typebank' value='diff')
+  br
+  |             accno:
+  input(type='text' name='accno' value='')
+  br
+  |             amount:
+  input(type='text' name='amount' value='')
+  br
+  |             mpin:
+  input(type='text' name='mpin' value='')
+  br
+  |             transfer
+  input(type='submit' value='transfer')
